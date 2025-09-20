@@ -1,0 +1,14 @@
+const router = require('express').Router();
+const verifyToken = require('../middlewares/verifyToken');
+// const allowedTo = require('../middlewares/allowedTo');
+const productController = require('../controllers/product.controller');
+const userRoles = require('../utils/userRoles');
+router.use(verifyToken);
+router.get('/products', productController.getProducts);
+router.get('/search', productController.search);
+router.post('/add',  productController.add);
+router.delete('/delet',  productController.delet);
+router.patch('/update/price',  productController.updatePrice);
+router.patch('/update/addAmount', productController.addAmount);
+router.patch('/update/removeAmount', productController.removeAmount);
+module.exports = router;

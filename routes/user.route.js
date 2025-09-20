@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const userController = require('../controllers/user.controller');
+const useRoles = require('../utils/userRoles');
+const allowedTo = require('../middlewares/allowedTo');
+const verifyToken = require('../middlewares/verifyToken');
+const userRoles = require('../utils/userRoles');
+router.get('/users', verifyToken, userController.users);
+router.post('/register', userController.register);
+router.post('/login', userController.login);
+module.exports = router;
