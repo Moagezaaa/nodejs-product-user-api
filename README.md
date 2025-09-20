@@ -21,7 +21,9 @@ A simple Node.js REST API project for managing **users** and **products** using:
 - node app.js
 
 ## ⚙️ Environment Variables
-- Create a .env file in the root directory and add:
-- PORT=3000
-- JWT_SECRET=your_secret_key
+Create a .env file in the root directory and add:
 
+```txt
+PORT=3000
+JWT_SECRET=your_secret_key
+```
