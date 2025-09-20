@@ -19,3 +19,9 @@ Clone the repository and install dependencies:
 git clone https://github.com/Moagezaaa/nodejs-product-user-api.git
 cd nodejs-product-user-api
 npm install
+node app.js
+## ⚙️ Environment Variables
+-Create a .env file in the root directory and add:
+PORT=3000
+JWT_SECRET=your_secret_key
+
